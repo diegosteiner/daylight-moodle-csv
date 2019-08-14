@@ -1,0 +1,19 @@
+{
+  "name": "daylight-moodle-csv",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^5.1.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}
