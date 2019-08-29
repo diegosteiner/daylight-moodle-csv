@@ -4,18 +4,102 @@
   <head>
     <title>Getting Started</title>
     <script src="main.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.25em;
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 2rem;
+        border: 1px solid black;
+      }
+
+      .table-of-contents {
+        padding: 2rem 4rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      .tipps {
+        padding: 2rem;
+      }
+
+      section h1,
+      h2 {}
+
+    </style>
   </head>
 
   <body>
-    <input id="course-input" type="text" placeholder="Modulname" />
-    <input id="password-input" type="text" value="welcome2ZLI+2019" />
-    <input id="csv-input" accept=".csv" type="file" />
-    <a href="" id="csv-output"></a>
+    <header>
+      <ol class="table-of-contents">
+        <li><a href="#create-course">Kurs in Moodle erstellen</a></li>
+        <li><a href="#export-participants">Teilnehmer aus Daylight exportieren</a></li>
+        <li><a href="#prepare-participants">Teilnehmer-Export für Moodle vorbereiten</a></li>
+        <li><a href="#import-participants">Teilnehmer in Moodle importieren</a></li>
+        <li><a href="#add-trainers">Kursleiter zu Kurs hinzufügen</a></li>
+      </ol>
+    </header>
     <main>
-      <section>
-        <h1></h1>
+      <section id="create-course">
+        <h1>Kurs in Moodle erstellen</h1>
+        <ul class="tipps">
+          <li>Master-Kurs auf <a href="https://moodle-2.zli.ch/course/search.php?search">Moodle</a> "sichern" und dann
+            als neuen Kurs "wiederherstellen"
+          </li>
+          <li>Wenn der Master-Kurs vor weniger als 1 Monat bereits gesichert wurde, kann der Kurs auch direkt
+            wiederhergestellt werden</li>
+          <li>Der Kurs wird nach dem Schema "Modul [NR] - [ANLASS_NR]" benannt und im passenden Kursbereich abgelegt,
+            z.B. "ÜK Zentrum / 2019"</li>
+        </ul>
+        <img src="img/create-course.png">
       </section>
 
+      <section id="export-participants">
+        <h1>Teilnehmer aus Daylight exportieren</h1>
+        <ul class="tipps">
+          <li>Die Teilnehmenden können aus Daylight mit dem Bericht "ZLI TN-Liste Technik Moodle" exportiert werden</li>
+          <li>Bei den Einstellungen muss darauf geachtet werden, dass als Zeichensatz "utf-8" verwendet wird</li>
+        </ul>
+        <img src="img/export-participants.png">
+      </section>
+
+      <section id="prepare-participants">
+        <h1>Teilnehmer-Export für Moodle vorbereiten</h1>
+        <ul class="tipps">
+          <li>Die Exportierte Datei kann hier für Moodle vorbereitet werden</li>
+          <li>Bei Modulname muss die exakte Bezeichnung des neu erstellten Moodle Kurses eingegeben werden</li>
+        </ul>
+        <input id="course-input" type="text" placeholder="Modulname" />
+        <input id="password-input" type="text" value="welcome2ZLI+2019" />
+        <input id="csv-input" accept=".csv" type="file" />
+        <a href="" id="csv-output"></a>
+      </section>
+
+      <section id="import-participants">
+        <h1>Teilnehmer in Moodle importieren</h1>
+        <ul class="tipps">
+          <li>Über die Webseiten-Administration kann eine Nutzerliste hochgeladen werden</li>
+          <li>Bei den Einstellungen muss darauf geachtet werden, dass als als CSV-Trennzeichen das ";" ausgewählt wird
+            und als Encoding "utf-8" verwendet wird</li>
+          <li>Nach der Import muss nach Abschluss auf Fehler kontrolliert werden.</li>
+        </ul>
+        <img src="img/import-participants.png">
+      </section>
+
+      <section id="add-trainers">
+        <h1>Kursleiter zu Kurs hinzufügen</h1>
+        <ul class="tipps">
+          <li>Auf der Teilnehmer/innen Seite des neu erstellten Kurses muss der Kursleiter manuell hinuzgefügt werden
+          </li>
+          <li>Hier kann auch kontrolliert werden, ob die Teilnehmenden korrekt dem Kurs zugeordnet wurden</li>
+        </ul>
+        <img src="img/add-trainers.png">
+      </section>
     </main>
   </body>
 
