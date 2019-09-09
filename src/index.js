@@ -12,14 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   courseInput.addEventListener('change', (ev) => {
     const courseName = courseInput.value
     const password = passwordInput.value
-    const text = `
-Liebe
+    const text = `Liebe [KURSLEITUNG]
 
-Dein Moodle-Kurs für das Modul ${courseName} steht dir ab sofort unter [LINK] zur Verfügung. Das Standardpasswort
-für die Teilnehmenden lautet ${password}
+Dein Moodle-Kurs für das ${courseName} steht dir ab sofort unter [LINK] zur Verfügung. Das Standardpasswort
+für die Teilnehmenden lautet ${password}.
 
-Freundliche Grüsse
-          `
+Freundliche Grüsse`
     mailInput.value = text
 
   })
